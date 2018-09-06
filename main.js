@@ -1,10 +1,11 @@
-clickMe.addEventListener('click', function(e){ 
-    popover.style.display = 'block'  
-    document.addEventListener('click', function(){
-      popover.style.display = 'none' 
-    })
+$(clickMe).on('click', function(){
+  $(popover).show()
+  $(document).one('click', function(){
+    $(popover).hide()
   })
-  wrapper.addEventListener('click', function(e){
-    e.stopPropagation()
-  })
+})
+
+$(wrapper).on('click', function(e){
+  e.stopPropagation()
+})
   
