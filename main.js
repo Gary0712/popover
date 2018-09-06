@@ -1,11 +1,12 @@
 $(clickMe).on('click', function(){
   $(popover).show()
-  $(document).one('click', function(){
-    $(popover).hide()
-  })
+  setTimeout(function(){
+    $(document).one('click', function(){
+      $(popover).hide() 
+    })
+  },0)
 })
 
 $(wrapper).on('click', function(e){
   e.stopPropagation()
 })
-  
